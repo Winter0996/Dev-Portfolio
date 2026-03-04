@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react';
 import SectionNav from '../SectionNav';
 
 const GITHUB_USERNAME = 'Winter0996';
-
-// Free page view counter — replace namespace with something unique to your site
 const COUNT_URL = `https://api.countapi.xyz/hit/nathanwinter-portfolio/pageviews`;
 
 export default function Stats() {
@@ -19,13 +17,10 @@ export default function Stats() {
   }, []);
 
   const handleLike = () => {
-    if (!liked) {
-      setLikes(l => l + 1);
-      setLiked(true);
-    }
+    if (!liked) { setLikes(l => l + 1); setLiked(true); }
   };
 
-  const statsUrl = `https://github-readme-stats.vercel.app/api?username=${GITHUB_USERNAME}&show_icons=true&theme=transparent&hide_border=true&title_color=a78bfa&icon_color=a78bfa&text_color=aaaaaa&bg_color=00000000&rank_icon=github&count_private=true`;
+  const statsUrl  = `https://github-readme-stats.vercel.app/api?username=${GITHUB_USERNAME}&show_icons=true&theme=transparent&hide_border=true&title_color=a78bfa&icon_color=a78bfa&text_color=aaaaaa&bg_color=00000000&rank_icon=github&count_private=true`;
   const langsUrl  = `https://github-readme-stats.vercel.app/api/top-langs/?username=${GITHUB_USERNAME}&layout=compact&theme=transparent&hide_border=true&title_color=a78bfa&text_color=aaaaaa&bg_color=00000000`;
   const streakUrl = `https://streak-stats.demolab.com?user=${GITHUB_USERNAME}&theme=transparent&hide_border=true&ring=a78bfa&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=888888&dates=555555&stroke=ffffff08&background=00000000`;
   const calUrl    = `https://ghchart.rshah.org/7c3aed/${GITHUB_USERNAME}`;
@@ -33,28 +28,30 @@ export default function Stats() {
   return (
     <section id="stats" className="min-h-screen flex items-start py-20 px-8 animate-fade-in">
       <div className="max-w-3xl w-full">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-3" style={{ fontFamily: 'Syne, sans-serif' }}>
+        <h2
+          className="text-4xl md:text-5xl font-extrabold mb-4 leading-[1.15] tracking-tight"
+          style={{ fontFamily: 'Outfit, sans-serif', color: 'var(--text)' }}>
           About this portfolio
         </h2>
-        <p className="text-base text-[var(--muted-light)] mb-10">
+        <p className="text-base mb-10" style={{ color: 'var(--muted-light)' }}>
           Insights and metrics about this portfolio website
         </p>
 
-        {/* Page metric cards */}
+        {/* Metric cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
           <div className="p-6 rounded-xl" style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}>
-            <div className="flex items-center gap-2 text-[var(--accent-light)] text-sm mb-3">
+            <div className="flex items-center gap-2 text-sm mb-3" style={{ color: 'var(--accent-light)' }}>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
               Total Views
             </div>
             <p className="text-5xl font-extrabold mb-1" style={{ fontFamily: 'Syne, sans-serif', color: 'var(--accent-light)' }}>
               {views !== null ? views.toLocaleString() : '—'}
             </p>
-            <p className="text-xs text-[var(--muted)]">Unique page visits tracked live</p>
+            <p className="text-xs" style={{ color: 'var(--muted)' }}>Unique page visits tracked live</p>
           </div>
 
           <div className="p-6 rounded-xl" style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}>
-            <div className="flex items-center gap-2 text-pink-400 text-sm mb-3">
+            <div className="flex items-center gap-2 text-sm mb-3 text-pink-400">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
               Appreciation Count
             </div>
@@ -71,31 +68,30 @@ export default function Stats() {
           </div>
         </div>
 
-        {/* GitHub section */}
-        <h3 className="text-2xl font-extrabold text-white mb-1" style={{ fontFamily: 'Syne, sans-serif' }}>GitHub Stats</h3>
-        <p className="text-sm text-[var(--muted-light)] mb-6">Insights and metrics about my GitHub profile</p>
+        {/* GitHub */}
+        <h3 className="text-2xl font-extrabold mb-1 leading-[1.2]" style={{ fontFamily: 'Syne, sans-serif', color: 'var(--text)' }}>
+          GitHub Stats
+        </h3>
+        <p className="text-sm mb-6" style={{ color: 'var(--muted-light)' }}>Insights and metrics about my GitHub profile</p>
 
-        {/* Contribution calendar */}
         <div className="p-5 rounded-xl mb-4 overflow-hidden" style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}>
-          <p className="text-xs uppercase tracking-widest text-[var(--muted)] mb-4">Contribution Graph</p>
+          <p className="text-xs uppercase tracking-widest mb-4" style={{ color: 'var(--muted)' }}>Contribution Graph</p>
           <img src={calUrl} alt="GitHub Contributions" className="w-full" loading="lazy" style={{ filter: 'brightness(1.1)' }} />
         </div>
 
-        {/* Stats + langs side by side */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
           <div className="p-5 rounded-xl overflow-hidden" style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}>
-            <p className="text-xs uppercase tracking-widest text-[var(--muted)] mb-3">Overview</p>
+            <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'var(--muted)' }}>Overview</p>
             <img src={statsUrl} alt="GitHub Stats" className="w-full" loading="lazy" />
           </div>
           <div className="p-5 rounded-xl overflow-hidden" style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}>
-            <p className="text-xs uppercase tracking-widest text-[var(--muted)] mb-3">Top Languages</p>
+            <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'var(--muted)' }}>Top Languages</p>
             <img src={langsUrl} alt="Top Languages" className="w-full" loading="lazy" />
           </div>
         </div>
 
-        {/* Streak */}
         <div className="p-5 rounded-xl overflow-hidden" style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}>
-          <p className="text-xs uppercase tracking-widest text-[var(--muted)] mb-3">Contribution Streak</p>
+          <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'var(--muted)' }}>Contribution Streak</p>
           <img src={streakUrl} alt="Streak" className="w-full max-w-lg mx-auto block" loading="lazy" />
         </div>
 

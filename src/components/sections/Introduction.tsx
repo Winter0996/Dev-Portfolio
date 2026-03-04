@@ -1,27 +1,28 @@
 import { FileText, Mail } from 'lucide-react';
 import SectionNav from '../SectionNav';
 
-const RESUME_URL = '/resume.pdf';
-const EMAIL = 'natefwinter96@gmail.com';
+const RESUME_URL = `${import.meta.env.BASE_URL}resume.pdf`;
+const EMAIL = 'nathanfwinter@gmail.com';
 
 export default function Introduction() {
   return (
     <section id="introduction" className="min-h-screen flex items-center py-20 px-8 animate-fade-in">
       <div className="max-w-3xl w-full">
         <h1
-          className="text-5xl md:text-6xl font-extrabold text-white mb-3 leading-tight"
-          style={{ fontFamily: 'Syne, sans-serif' }}>
+          className="text-5xl md:text-6xl font-extrabold mb-4 leading-[1.15] tracking-tight"
+          style={{ fontFamily: 'Outfit, sans-serif', color: 'var(--text)' }}>
           Nathan Winter
         </h1>
         <h2
-          className="text-3xl md:text-4xl font-bold mb-6 italic"
-          style={{ fontFamily: 'Syne, sans-serif', color: 'var(--accent-light)' }}>
+          className="text-2xl md:text-3xl font-bold italic mb-6 leading-[1.3]"
+          style={{ fontFamily: 'Space Mono, monospace', color: 'var(--accent-light)' }}>
           A software developer who writes clean, maintainable, and scalable code.
         </h2>
 
-        <p className="text-[var(--muted-light)] text-base leading-relaxed mb-8 max-w-2xl">
-          I am a dedicated Software developer specializing in building clean, responsive web
-          applications using modern technologies. I focus on crafting intuitive, high-performance user experiences.
+        <p className="text-base leading-relaxed mb-8 max-w-2xl" style={{ color: 'var(--muted-light)' }}>
+          I am a dedicated software developer specializing in building clean, responsive web
+          applications using modern technologies. I focus on crafting intuitive, high-performance
+          user experiences.
         </p>
 
         <div className="flex items-center gap-3 flex-wrap">
@@ -38,7 +39,10 @@ export default function Introduction() {
           </a>
           <a
             href={`mailto:${EMAIL}`}
-            className="flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium text-[var(--muted-light)] hover:text-white transition-colors">
+            className="flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors"
+            style={{ color: 'var(--muted-light)' }}
+            onMouseOver={e => (e.currentTarget.style.color = 'var(--text)')}
+            onMouseOut={e => (e.currentTarget.style.color = 'var(--muted-light)')}>
             <Mail size={14} /> Send Mail
           </a>
         </div>

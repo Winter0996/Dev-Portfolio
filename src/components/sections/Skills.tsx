@@ -44,13 +44,13 @@ export default function Skills() {
     <section id="skills" className="min-h-screen flex items-start py-20 px-8 animate-fade-in">
       <div className="max-w-3xl w-full">
         <h2
-          className="text-4xl md:text-5xl font-extrabold text-white mb-3"
-          style={{ fontFamily: 'Syne, sans-serif' }}>
+          className="text-4xl md:text-5xl font-extrabold mb-4 leading-[1.15] tracking-tight"
+          style={{ fontFamily: 'Outfit, sans-serif', color: 'var(--text)' }}>
           Skills & Tools
         </h2>
         <p
           className="text-2xl md:text-3xl font-bold italic mb-5"
-          style={{ fontFamily: 'Syne, sans-serif', color: 'var(--accent-light)' }}>
+          style={{ fontFamily: 'Space Mono, monospace', color: 'var(--accent-light)' }}>
           Learned by coding all night and debugging all day!
         </p>
 

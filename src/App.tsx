@@ -6,12 +6,13 @@ import Footer from './components/Footer';
 import Introduction from './components/sections/Introduction';
 import AboutMe from './components/sections/AboutMe';
 import Projects from './components/sections/Projects';
+import Certifications from './components/sections/Certifications';
 import Skills from './components/sections/Skills';
 import Education from './components/sections/Education';
 import Contact from './components/sections/Contact';
 import Stats from './components/sections/Stats';
 
-const SECTIONS = ['introduction','about','projects','skills','education','contact','stats'];
+const SECTIONS = ['introduction','about','projects', 'certifications','skills','education','contact','stats'];
 
 export default function App() {
   const [active, setActive] = useState('introduction');
@@ -41,6 +42,8 @@ export default function App() {
         <AboutMe />
         <div style={{ borderTop: '1px solid var(--border)' }} />
         <Projects />
+        <div style={{ borderTop: '1px solid var(--border)' }} />
+        <Certifications />
         <div style={{ borderTop: '1px solid var(--border)' }} />
         <Skills />
         <div style={{ borderTop: '1px solid var(--border)' }} />
