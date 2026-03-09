@@ -1,8 +1,8 @@
 import { FileText, Mail } from 'lucide-react';
 import SectionNav from '../SectionNav';
 
-const RESUME_URL = `${import.meta.env.BASE_URL}resume.pdf`;
-const EMAIL = 'nathanfwinter@gmail.com';
+const RESUME_URL = `${import.meta.env.BASE_URL}nathanwinter-resume.pdf`;
+const EMAIL = 'natefwinter96@gmail.com';
 
 export default function Introduction() {
   return (
