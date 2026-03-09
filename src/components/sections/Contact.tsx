@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import SectionNav from '../SectionNav';
 
-const EMAIL = 'nathanfwinter@gmail.com';
+const EMAIL = 'natefwinter96@gmail.com';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });

@@ -17,14 +17,13 @@ export default function AboutMe() {
 
         <div className="space-y-4 text-base leading-relaxed max-w-2xl" style={{ color: 'var(--muted-light)' }}>
           <p>
-            Hey! I'm <span style={{ color: 'var(--text)' }} className="font-medium">Nathan Winter</span> — a frontend developer
+            Hey! I'm <span style={{ color: 'var(--text)' }} className="font-medium">Nathan Winter</span> — a full stack developer
             passionate about building clean, purposeful software. I love the intersection of design
             and engineering, where good code meets great user experience.
           </p>
           <p>
             I thrive on learning new technologies and turning complex problems into simple, elegant
-            solutions. When I'm not coding, I'm exploring open source projects or leveling up my
-            skills one challenge at a time.
+            solutions.
           </p>
           <p>
             I'm currently open to new opportunities where I can contribute, grow, and make an impact.
@@ -34,8 +33,8 @@ export default function AboutMe() {
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-10">
           {[
-            { label: 'Location', value: 'Providence, RI' },
-            { label: 'Focus',    value: 'Frontend Dev'   },
+            { label: 'Location', value: 'North Kingstown, RI' },
+            { label: 'Focus',    value: 'Full Stack Dev'   },
             { label: 'Status',   value: 'Open to Work'   },
             { label: 'Pronouns', value: 'He / Him'       },
           ].map(item => (
