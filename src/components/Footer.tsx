@@ -13,6 +13,7 @@ export default function Footer() {
             </span>
           ))}
           {' '}&nbsp;·&nbsp; Coded in <span className="text-[var(--muted-light)]">VSCode</span>
+          {' '}&nbsp;·&nbsp; Deployed on <span className="text-[var(--muted-light)]">Vercel</span>
         </p>
         <p className="text-[11px] text-[var(--muted)] opacity-50 tracking-widest uppercase">
           Developed by Nathan Winter

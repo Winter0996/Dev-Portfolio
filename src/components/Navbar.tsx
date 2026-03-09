@@ -4,7 +4,7 @@ import { Home, Linkedin, FileText, Moon, Sun } from 'lucide-react';
 
 const GITHUB_URL   = 'https://github.com/Winter0996';
 const LINKEDIN_URL = 'https://www.linkedin.com/in/nathanfwinter/';
-const RESUME_URL   = '/resume.pdf';
+const RESUME_URL   = '/nathanwinter-resume.pdf';
 
 export default function Navbar() {
   const [time, setTime] = useState('');
@@ -40,7 +40,7 @@ export default function Navbar() {
           style={{ border: '1px solid var(--border)' }}
         />
         <span style={{ fontFamily: 'Syne, sans-serif', color: 'var(--text)', fontWeight: 600, fontSize: '0.875rem' }}>
-          nfw.dev
+          nathanwinter.dev
         </span>
       </a>
 
