@@ -4,7 +4,7 @@ import { Home, Linkedin, FileText, Moon, Sun } from 'lucide-react';
 
 const GITHUB_URL   = 'https://github.com/Winter0996';
 const LINKEDIN_URL = 'https://www.linkedin.com/in/nathanfwinter/';
-const RESUME_URL   = '/nathanwinter-resume.pdf';
+const RESUME_URL   = '/Resume2026.pdf';
 
 export default function Navbar() {
   const [time, setTime] = useState('');
