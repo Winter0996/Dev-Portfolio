@@ -8,6 +8,13 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'Local RAG Assistant',
+    description:
+      'A fully local, privacy-first RAG application for chatting with your documents. Features streaming responses, source citations, multi-document filtering, and conversation history — powered entirely by Llama 3 via Ollama, with zero API costs.',
+    tech: ['React', 'TypeScript', 'Flask', 'ChromaDB', 'Sentence-Transformers', 'Ollama'],
+    repoUrl: 'https://github.com/Winter0996/local-rag-assistant',
+  },
+  {
     title: 'File Upload Dashboard',
     description:
       'A responsive file management app with drag-and-drop uploads, per-file progress tracking, toast notifications, and a demo login system. Built with a clean card layout and full mobile support.',
@@ -27,5 +34,6 @@ export const projects: Project[] = [
       'This portfolio — a single-page React app with a fixed sidebar, dark/light mode toggle, live GitHub stats, certifications, and a contact form. Deployed via GitHub Pages.',
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
     repoUrl: 'https://github.com/Winter0996/Dev-Portfolio',
+    liveUrl: 'https://nathanwinter.vercel.app/',
   },
 ];
